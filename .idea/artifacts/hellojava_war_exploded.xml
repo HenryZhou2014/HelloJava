@@ -6,6 +6,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="hellojava" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.xerial:sqlite-jdbc:3.20.1" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/hellojava/META-INF/MANIFEST.MF" />
