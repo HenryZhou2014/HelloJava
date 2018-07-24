@@ -8,6 +8,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.xerial:sqlite-jdbc:3.20.1" />
+          <element id="library" level="project" name="Maven: com.googlecode:reflectasm:1.01" />
+          <element id="library" level="project" name="Maven: asm:asm:3.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

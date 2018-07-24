@@ -31,7 +31,11 @@
       <artifactId>sqlite-jdbc</artifactId>
       <version>3.20.1</version>
     </dependency>
-
+    <dependency>
+      <groupId>com.googlecode</groupId>
+      <artifactId>reflectasm</artifactId>
+      <version>1.01</version>
+    </dependency>
   </dependencies>
 
   <build>
