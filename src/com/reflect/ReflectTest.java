@@ -4,6 +4,8 @@ import com.esotericsoftware.reflectasm.MethodAccess;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ReflectTest {
 
@@ -43,15 +45,15 @@ public class ReflectTest {
         System.out.println("标准反射耗时"+(System.currentTimeMillis() - now) + "ms，和是" +sum);
 
         sum = 0;
-
-//        Class<?> c = Class.forName("test.TestClass");
-//        Class<?>[] argsType = new Class[1];
-//        argsType[0] = int.class;
+        Map<String,Method> cacheMethod= new HashMap<String,Method>();
         Method m = c.getMethod("setNum", argsType);
-
+        for(int j =0;j<500;j++){
+            cacheMethod.put("com.test.test"+j,m);
+        }
         now = System.currentTimeMillis();
 
         for(int i = 0; i<500000; ++i){
+            m = cacheMethod.get("com.test.test499");
             m.invoke(t, i);
             sum += t.getNum();
         }
