@@ -78,6 +78,12 @@
       <artifactId>jstl</artifactId>
       <version>${jstl.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>1.9.1</version>
+    </dependency>
   </dependencies>
 
   <build>

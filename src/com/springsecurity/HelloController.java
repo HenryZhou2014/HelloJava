@@ -29,4 +29,8 @@ public class HelloController {
         return model;
 
     }
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public ModelAndView loginPage() {
+       return new ModelAndView("login");
+    }
 }
